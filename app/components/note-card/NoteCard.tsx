@@ -67,6 +67,7 @@ const NoteCard = ({ note, onUpdateNote, onDeleteNote }: NoteCardProps) => {
                         type="text"
                         value={editTitle}
                         onChange={(e) => setEditTitle(e.target.value)}
+                        placeholder="Título de la nota"
                         className="text-xl font-semibold text-gray-800 truncate w-full p-2 border rounded"
                     />
                 ) : (
@@ -80,6 +81,7 @@ const NoteCard = ({ note, onUpdateNote, onDeleteNote }: NoteCardProps) => {
                         onChange={(e) => setEditContent(e.target.value)}
                         className="w-full p-2 border rounded resize-none"
                         rows={4}
+                        placeholder="Escribe tu nota aquí..."
                     />
                 ) : (
                     <p className="text-gray-600 text-wrap line-clamp-[6] text-justify">{note.content}</p>
@@ -110,7 +112,7 @@ const NoteCard = ({ note, onUpdateNote, onDeleteNote }: NoteCardProps) => {
                 {isEditing || note.isCreating ? (
                     <div className="flex flex-row space-x-4">
                         <button
-                            onClick={() => setIsEditing(false)}
+                            onClick={handleSaveClick}
                             className="text-red-600 border border-red-600 hover:bg-red-600 hover:text-white p-2 rounded"
                         >
                             Cancelar
