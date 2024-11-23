@@ -5,4 +5,6 @@ export interface NoteData {
     content: string;
     status: number;
     created_at: Date;
+
+    isCreating?: boolean;
 }
