@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Inter:wght@400..700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilos Globales */
+body {
+  @apply font-Inter antialiased bg-gray_secondary text-gray_primary;
+} 
+
+a {
+  @apply text-blue_category hover:underline;
+}
